@@ -15,4 +15,15 @@ append body-title
 append body-content
   .row
     .col-md-12
-      // Start ur code herr
+      table.table.table-bordered.table-striped.table-hover
+        tr(data-ng-repeat='row in bc.weather.data')
+          td.width-60.text-center
+            weather-icon(icon='row.icon', height='50', width='50')
+          td
+            .position-relative.height-60
+              .line-height-20
+                {{(row.time*1000) | date: 'EEEE'}}
+              .line-height-20
+                strong {{row.apparentTemperatureMax | number:0}} / {{row.apparentTemperatureMin | number:0}}
+              .line-height-20
+                span {{row.summary}}

@@ -12,7 +12,12 @@
     $log.log('Master_Controller loaded.');
   }
   /* @ngInject */
-  function Body_Controller($log){
-    $log.log('Body_Controller loaded.');
+  function Body_Controller(ForecastService){
+    var vm = this;
+
+    ForecastService.GetForecast({}, function onSuccess(results){
+      vm.weather = results;
+      console.log(results);
+    });
   }
 })();
