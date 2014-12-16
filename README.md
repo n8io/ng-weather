@@ -18,7 +18,7 @@ Requirements:
 `grunt`
 
 ## To run node app
-node ./src/server/app.js
+`node ./src/server/app.js`
 
 ## To view app
-http://localhost:3000
+(http://localhost:3000)[http://localhost:3000]
