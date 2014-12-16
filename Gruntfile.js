@@ -7,7 +7,7 @@ module.exports = function(grunt) {
   var setup = {
     baseUrl: null,
     jadeSrcFileArr: [
-      '**/*.jade'
+      'index.jade'
     ],
     jadeWatchFileArr: [
       './src/server/views/**/*.jade'
