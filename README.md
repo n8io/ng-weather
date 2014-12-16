@@ -21,4 +21,4 @@ Requirements:
 `node ./src/server/app.js`
 
 ## To view app
-(http://localhost:3000)[http://localhost:3000]
+[http://localhost:3000](http://localhost:3000)
