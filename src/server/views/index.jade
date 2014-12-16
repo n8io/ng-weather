@@ -1,0 +1,18 @@
+extends _layouts/master
+
+append header-meta
+  base(href='/')
+
+append header-title
+  | Angular Examples
+
+append body-ng-controller
+  - controller_name = 'Body_Controller';
+
+append body-title
+  +body-title('ng-weather', 'Using Angular to show the forecast.')
+
+append body-content
+  .row
+    .col-md-12
+      // Start ur code herr

@@ -1,0 +1,22 @@
+{
+  "name": "ng-weather",
+  "version": "0.0.0",
+  "homepage": "https://github.com/n8io/ng-weather",
+  "authors": [
+    "Nate Clark <nate@n8io.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.1",
+    "prism": "git@github.com:LeaVerou/prism.git#gh-pages",
+    "md5-jkmyers": "~0.0.1"
+  }
+}
