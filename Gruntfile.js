@@ -202,7 +202,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: './src/server/views/html',
+            cwd: './src/server/views',
             src: setup.jadeSrcFileArr,
             dest: 'src/client/',
             ext: '.html'
