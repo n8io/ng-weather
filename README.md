@@ -1,5 +1,7 @@
 # ng-weather
 
+![ng-weather](/weather.png?raw=true "ng-weather")
+
 Requirements:
   NodeJs (0.10.*)
 
