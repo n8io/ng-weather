@@ -1,20 +1,27 @@
 (function(){
   'use strict';
-  
+
   angular
     .module('app')
-    .service('TestService', TestService);
-  
+    .service('IconService', IconService)
+    .service('ForecastService', ForecastService)
+    ;
+
+  /* ngInject */
+  function IconService(){
+    return new Skycons();
+  }
+
   /* @ngInject */
-  function TestService($resource, APP_CONSTANTS){
+  function ForecastService($resource, APP_CONSTANTS){
     return $resource(
-      APP_CONSTANTS.testJsonUri, // svc url
+      '/api/weather', // svc url
       {}, // parameters
-      { 
+      {
         // methods
-        Get: {
+        GetForecast: {
           method: 'GET',
-          isArray: true
+          isArray: false
         }
       }
     );

@@ -4,15 +4,26 @@ append header-meta
   base(href='/')
 
 append header-title
-  | ng-weather
+  | Angular weather
 
 append body-ng-controller
-  - controller_name = 'Body_Controller';
+  - controller_name = 'Weather_Controller as wc';
 
 append body-title
-  +body-title('ng-weather', 'Using Angular to show the forecast.')
+  h4 Using Angular to show the forecast.
 
 append body-content
   .row
     .col-md-12
-      // Start ur code herr
+      table.table.table-bordered.table-striped.table-hover
+        tr(data-ng-repeat='row in wc.weather.data')
+          td.width-60.text-center
+            weather-icon(icon='row.icon', height='65', width='65')
+          td
+            .height-60
+              h3.mgn-0
+                {{(row.time*1000) | date: 'EEEE'}}
+              .line-height-20
+                strong {{row.apparentTemperatureMax | number:0}} / {{row.apparentTemperatureMin | number:0}}
+              .line-height-20
+                span {{row.summary}}

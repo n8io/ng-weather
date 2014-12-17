@@ -4,7 +4,7 @@
   angular
     .module('app')
     .controller('Master_Controller', Master_Controller)
-    .controller('Body_Controller', Body_Controller)
+    .controller('Weather_Controller', Weather_Controller)
     ;
 
   /* @ngInject */
@@ -12,7 +12,12 @@
     $log.log('Master_Controller loaded.');
   }
   /* @ngInject */
-  function Body_Controller($log){
-    $log.log('Body_Controller loaded.');
+  function Weather_Controller(ForecastService){
+    var vm = this;
+
+    ForecastService.GetForecast({}, function onSuccess(results){
+      vm.weather = results;
+      console.log(results);
+    });
   }
 })();
