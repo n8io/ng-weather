@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/server/app.js",
-    "postinstall": "./node_modules/grunt-cli/bin/grunt",
+    "postinstall": "./node_modules/bower/bin/bower install && ./node_modules/grunt-cli/bin/grunt",
     "devstart": "./node_modules/.bin/nodemon ./src/server/app.js"
   },
   "author": "",

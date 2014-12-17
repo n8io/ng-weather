@@ -8,7 +8,6 @@ Requirements:
 ## Initialize
 1. `git clone git@github.com:n8io/ng-weather.git && cd ng-weather`
 2. `npm install`
-3. `./node_modules/bower/bin/bower install`
 
 ## To build dev assets
 `grunt dev`
