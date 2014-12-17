@@ -2,10 +2,9 @@
   'use strict';
 
   angular
-    .module('app.directives', [])
+    .module('weather.directives', [])
     .directive('weatherIcon', weatherIcon)
     ;
-
 
   /* @ngInject */
   function weatherIcon(IconService) {
@@ -33,4 +32,5 @@
       });
     }
   }
+  weatherIcon.$inject = ['IconService'];
 })();

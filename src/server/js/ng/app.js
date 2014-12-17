@@ -2,9 +2,5 @@
   'use strict';
 
   angular
-    .module('app', [
-      'ngRoute',
-      'ngResource',
-      'app.directives'
-    ]);
+    .module('app', []);
 })();

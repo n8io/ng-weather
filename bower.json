@@ -16,10 +16,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#~0.5.1",
-    "prism": "git@github.com:LeaVerou/prism.git#gh-pages",
     "md5-jkmyers": "~0.0.1",
-    "momentjs": "~2.8.4",
-    "moment": "~2.8.4",
     "github-fork-ribbon-css": "~0.1.1"
   }
 }

@@ -1,7 +1,7 @@
 block header-stylesheets
   link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css', data-id='css-bootstrap')
+  link(rel='stylesheet', href='#{locals.baseUrl?baseUrl:""}/statics/bower_components/github-fork-ribbon-css/gh-fork-ribbon.css')
   link(rel='stylesheet', href='#{locals.baseUrl?baseUrl:""}/css/style.min.css?noc=#{cacheKey}')
-  link(rel='stylesheet', href='#{locals.baseUrl?baseUrl:""}/statics/bower_components/github-fork-ribbon-css/gh-fork-ribbon.css?noc=#{cacheKey}')
   style.
     body {transition: opacity ease-in 0.2s; }
     body[unresolved] {opacity: 0; display: block; overflow: hidden; }
