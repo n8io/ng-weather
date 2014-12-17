@@ -2,7 +2,9 @@
   'use strict';
 
   angular
-    .module('weather.directives', [])
+    .module('weather.directives', [
+      'app.services'
+    ])
     .directive('weatherIcon', weatherIcon)
     ;
 

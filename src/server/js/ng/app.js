@@ -2,5 +2,8 @@
   'use strict';
 
   angular
-    .module('app', []);
+    .module('app', [
+      'app.services',
+      'weather.directives'
+    ]);
 })();
