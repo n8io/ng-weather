@@ -3,6 +3,7 @@ var express = require('express');
 var statics = require('serve-static');
 var request = require('request');
 var app = express();
+var pkg = require('../../package.json');
 
 app.use(statics(path.join(__dirname, '../client'), {index:false}));
 
@@ -40,5 +41,5 @@ var server = app.listen(port, ip, function (){
   var host = server.address().address;
   var port = server.address().port;
 
-  console.log('App running at http://%s:%s', host, port)
+  console.log(pkg.name + ' running at http://%s:%s', host, port)
 });
