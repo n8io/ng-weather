@@ -1,7 +1,7 @@
 node_modules
+bower_components
 client
 tmp
 logs
 npm-*.*
 *c9*
-**/bower_components
