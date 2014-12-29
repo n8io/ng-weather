@@ -19,6 +19,7 @@
     "grunt": "~0.4.1",
     "grunt-angular-templates": "^0.5.7",
     "grunt-cli": "^0.1.13",
+    "grunt-concurrent": "^1.0.0",
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-copy": "^0.6.0",
     "grunt-contrib-csslint": "^0.3.1",
@@ -30,6 +31,8 @@
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-ng-annotate": "^0.7.0",
+    "grunt-node-inspector": "^0.1.5",
+    "grunt-nodemon": "^0.3.0",
     "grunt-shell": "^1.1.1",
     "grunt-stripcomments": "^0.3.1",
     "grunt-text-replace": "^0.3.12",
@@ -37,6 +40,7 @@
     "load-grunt-tasks": "^1.0.0",
     "moment": "^2.8.4",
     "nib": "^1.0.4",
+    "node-inspector": "^0.8.1",
     "nodemon": "^1.2.1"
   },
   "dependencies": {

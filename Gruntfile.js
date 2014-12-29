@@ -251,9 +251,6 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      options: {
-        livereload: true
-      },
       scripts: {
         files: setup.jsWatchFileArr,
         tasks: ['dev'],
@@ -285,6 +282,40 @@ module.exports = function(grunt) {
           nospawn: false,
           interrupt: false
         }
+      },
+      livereload: {
+        options: {
+          livereload: true
+        },
+        files: ['src/client/**/*'],
+      }
+    },
+    'node-inspector': {
+      dev: {
+        options: {
+          'web-port': 8080,
+          'web-host': 'localhost',
+          'debug-port': 5860,
+          'save-live-edit': true,
+          hidden: ['node_modules']
+        }
+      }
+    },
+    nodemon: {
+      dev: {
+        script: 'src/server/app.js',
+        options: {
+          nodeArgs: ['--debug=5860'],
+          watch: ['src/server/*.js'],
+          ext: 'js,json',
+          delay: 0
+        }
+      }
+    },
+    concurrent: {
+      tasks: ['nodemon', 'watch', 'node-inspector'],
+      options: {
+        logConcurrentOutput: true
       }
     }
   });
@@ -321,7 +352,7 @@ module.exports = function(grunt) {
   // Dev watcher
   grunt.registerTask('watcher', 'Fires minify css and js, then watches for changes', [
     'dev',
-    'watch'
+    'concurrent'
   ]);
 
   // Prod build (default task)
