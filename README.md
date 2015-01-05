@@ -12,14 +12,14 @@ Requirements:
 ## To build dev assets
 `grunt dev`
 
-## To watch assets for changes and rebuild
-`grunt watcher`
-
 ## To build prod assets
 `grunt`
 
 ## To run node app
-`node ./src/server/app.js`
+`npm start`
+
+## To watch assets for changes, rebuild, and start the app
+`grunt watcher`
 
 ## To view app
 [http://localhost:3000](http://localhost:3000)
