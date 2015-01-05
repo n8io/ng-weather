@@ -13,7 +13,7 @@
 
   function ForecastService($resource){
     return $resource(
-      '/api/weather',
+      '/api/weather/:latLong',
       {},
       {
         GetDailyForecast: {

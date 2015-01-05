@@ -6,16 +6,13 @@ append header-meta
 append header-title
   | Angular weather
 
-append header-stylesheets
-  style.
-    .right .github-fork-ribbon { background-color: #333; }
-
 append body-ng-controller
   - controller_name = 'Weather_Controller as wc';
 
 append body-title
-  h4 Using Angular to show the forecast.
-
+  h4
+    span Using Angular to show the 7 day forecast for
+    select(data-ng-model='wc.selectedLocation', data-ng-options='location as location.label for location in wc.locations')
 append body-content
   .row
     .col-md-12
@@ -25,6 +22,8 @@ append body-content
             weather-icon(icon='row.icon', height='60', width='60')
           td
             div
-              h3.mgn-0 {{::row.time*1000 | date:'EEEE'}}
+              h3.mgn-0
+                span {{::row.time*1000 | date:'EEEE'}}
+                span.text-muted {{::row.time*1000 | date:'MMM d'}}
               strong {{::row.temperatureMax | number:0}} / {{::row.temperatureMin | number:0}}
               div(data-ng-bind='::row.summary')

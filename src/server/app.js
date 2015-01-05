@@ -7,9 +7,9 @@ var pkg = require('../../package.json');
 
 app.use(statics(path.join(__dirname, '../client'), {index:false}));
 
-app.get('/api/weather', function(req, res){
+app.get('/api/weather/:latLong', function(req, res){
   var options = {
-    uri: 'https://api.forecast.io/forecast/5c0ddaf4144cc03f4d5c857e20584f4c/37.8267,-122.423',
+    uri: 'https://api.forecast.io/forecast/5c0ddaf4144cc03f4d5c857e20584f4c/' + req.params.latLong,
     json: true
   };
   request(options, function(err, resp){

@@ -1,3 +1,13 @@
 html
 body
+  margin 0
+  padding 0
+body
   color $font-color
+  transition opacity ease-in 0.2s
+body[unresolved]
+  opacity 0
+  display block
+  overflow hidden
+.text-muted
+  opacity .65
