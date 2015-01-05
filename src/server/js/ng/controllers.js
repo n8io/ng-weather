@@ -14,7 +14,6 @@
       { label: 'Atlanta, GA', latLong: '33.7483,-84.3911' },
       { label: 'Brussels, Belgium', latLong: '50.8484,4.3497' }
     ];
-    vm.selectedLocation = vm.locations[0];
 
     $scope.$watch(function getSelectedLocation(){
       return vm.selectedLocation || vm.locations[0];
@@ -23,6 +22,7 @@
     });
 
     vm.init = function init(){
+      vm.selectedLocation = vm.locations[0];
       loadWeatherData();
     };
 
