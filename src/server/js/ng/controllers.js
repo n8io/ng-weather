@@ -29,9 +29,11 @@
     vm.init();
 
     function loadWeatherData(){
+      vm.isWeatherDataLoading = true;
       ForecastService.GetDailyForecast({latLong:vm.selectedLocation.latLong}, function onSuccess(results){
         vm.weatherData = results;
         console.debug(results);
+        vm.isWeatherDataLoading = false;
       }, function onError(err){
 
       });

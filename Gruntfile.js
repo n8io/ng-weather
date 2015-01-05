@@ -287,7 +287,10 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         },
-        files: ['src/client/**/*'],
+        files: [
+          'src/client/**/*',
+          '!src/client/bower_compnents/**/*'
+        ],
       }
     },
     'node-inspector': {

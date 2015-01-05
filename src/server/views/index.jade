@@ -12,7 +12,7 @@ append body-ng-controller
 append body-title
   h4
     span Using Angular to show the 7 day forecast for
-    select(data-ng-model='wc.selectedLocation', data-ng-options='location as location.label for location in wc.locations')
+    select(data-ng-model='wc.selectedLocation', data-ng-options='location as location.label for location in wc.locations',data-ng-disabled='wc.isWeatherDataLoading')
 append body-content
   .row
     .col-md-12
